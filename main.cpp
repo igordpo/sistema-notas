@@ -12,11 +12,35 @@ int main()
     float notas[20][5];
     float media[20];
     int qtdDisciplinas;
+    int opcaoInicial;
 
     // processamento
 
     //LEITURA DE ALUNOS COMIT 1
    cout << "======SISTEMA DE NOTAS v4.0======" << endl;
+    cout << "1 - Novo relatorio " << endl;
+    cout << "2 - Ver relatorio  " << endl;
+    cout << "Escolha uma opcao: " << endl;
+    cin >> opcaoInicial;
+
+
+    //LEITURA DE ARQUIVO COMMIT 5
+
+    if(opcaoInicial == 2){
+        ifstream leitura("relatorio.txt");
+        if(leitura.is_open()){
+            string linha;
+            cout << "\n";
+            while (getline(leitura, linha)){
+                cout << linha << endl;
+            }
+            leitura.close();
+        } else {
+            cout << "Nenhum relatorio encontrado. " << endl;
+        }
+        return 0;
+   } 
+
 
     do
     {
@@ -90,7 +114,6 @@ int main()
     cout << "\nResumo: " << aprovados << "Aprovados, " << recuperaçao << " em recuperaçao, " << reprovados << "Reprovados." << endl;
       
 
-            //    
     ofstream arquivo("relatorio.txt");
 
     if(arquivo.is_open()){
