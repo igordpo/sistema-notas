@@ -14,6 +14,7 @@ Este é um programa desenvolvido em **C++** para o gerenciamento inteligente de 
   - 🟡 **Recuperação:** Média entre `5.0` e `6.9`.
   - 🔴 **Reprovado:** Média abaixo de `5.0`.
 - **💾 Persistência em Arquivo:** Grava o relatório final detalhado e um resumo estatístico em um arquivo chamado `relatorio.txt`.
+- **💾 Horario que o relatorio foi feito:** Grava o horario no final relatório marcando o horario que foi salvo em um arquivo chamado `relatorio.txt`.
 
 ---
 
