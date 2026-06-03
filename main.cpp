@@ -2,6 +2,7 @@
 #include <string>
 using namespace std;
 #include <fstream>
+#include <ctime>
 
 int main()
 {
@@ -72,7 +73,7 @@ int main()
         {
             do
             {
-                cout << "Disciplina " << j + 1 << "(1 a 5): ";
+                cout << "Disciplina " << j + 1 << "(1 a 10): ";
                 cin >> notas[i][j];
             } while (notas[i][j] < 1 || notas[i][j] > 10);
             soma += notas[i][j];
@@ -129,6 +130,9 @@ int main()
             }
         }
         arquivo << "\nResumo: "<< aprovados << " aprovados, " << recuperaçao << " em recuperaçao, " << reprovados << " reprovados. " << endl;
+             time_t agora = time(0);
+                char* dataHora = ctime(&agora);
+                arquivo << "Data do relatorio: " << dataHora << endl;
 
         arquivo.close();
         cout << "\nRelatorio salvo em relatorio.txt" << endl;

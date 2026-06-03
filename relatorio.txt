@@ -1,4 +1,10 @@
-=====RELATORIO
-alo- media:10 - Aprovado
+=====RELATORIO======
+igor- media:7.4 - Aprovado
+pedro- media:6.4 - rcupraçao
+lara- media:6.2 - rcupraçao
+luis- media:7 - Aprovado
+vitao- media:5 - rcupraçao
 
-Resumo: 1 aprovados, 0 em recuperaçao, 0 reprovados. 
+Resumo: 2 aprovados, 3 em recuperaçao, 0 reprovados. 
+Data do relatorio: Wed Jun 03 08:01:38 2026
+
