@@ -14,7 +14,10 @@ Este é um programa desenvolvido em **C++** para o gerenciamento inteligente de 
   - 🟡 **Recuperação:** Média entre `5.0` e `6.9`.
   - 🔴 **Reprovado:** Média abaixo de `5.0`.
 - **💾 Persistência em Arquivo:** Grava o relatório final detalhado e um resumo estatístico em um arquivo chamado `relatorio.txt`.
-- **💾 Horario que o relatorio foi feito:** Grava o horario no final relatório marcando o horario que foi salvo em um arquivo chamado `relatorio.txt`.
+- **⬜ Adiciona validacao de nome em branco:** Na parte da criação do `relatorio.txt` não tera como deixar sem nome .
+- **🧮 adiciona destaque maior e menor media:** grava no relatório final o detalhamento da maior media e a menor media dos alunos `relatorio.txt`.
+- **📖 adiciona relatorio de reprovados":** grava no relatório final `reprovados.txt` o detalhamento de quantos alunos foram reprovados.
+- **⌚ Horario que o relatorio foi feito:** Grava o horario no final relatório marcando o horario que foi salvo em um arquivo chamado `relatorio.txt`.
 
 ---
 
