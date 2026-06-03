@@ -14,20 +14,21 @@ int main()
     float media[20];
     int qtdDisciplinas;
     int opcaoInicial;
+    int validarNome;
 
     // processamento
-
     //LEITURA DE ALUNOS COMIT 1
-   cout << "======SISTEMA DE NOTAS v4.0======" << endl;
+    cout << "======SISTEMA DE NOTAS v4.1======" << endl;
     cout << "1 - Novo relatorio " << endl;
-    cout << "2 - Ver relatorio  " << endl;
+    cout << "2 - Ver relatorio  " << endl; 
+    cout << "3 - Sobre o sistema" << endl;
     cout << "Escolha uma opcao: " << endl;
     cin >> opcaoInicial;
 
 
     //LEITURA DE ARQUIVO COMMIT 5
 
-    if(opcaoInicial == 2){
+    if( opcaoInicial == 2){
         ifstream leitura("relatorio.txt");
         if(leitura.is_open()){
             string linha;
@@ -42,7 +43,15 @@ int main()
         return 0;
    } 
 
-
+        if(opcaoInicial == 3){
+                cout << "===== SOBRE =====" << endl; 
+                cout << "Sistema de Notas v4.1" << endl; 
+                cout << "Desenvolvido por: Igor Del Passo Oliveira" << endl; 
+                cout << "Turma: LOPAL 2026 - SENAI-SP" << endl; 
+                
+                return 0;
+        } 
+        
     do
     {
         cout << "Quantidade de alunos (1 a 20): ";
@@ -53,9 +62,16 @@ int main()
 
     for (int i = 0; i < qtdAlunos; i++)
     {
+        do{
         cout << "Nome do Aluno " << i + 1 << ": ";
         getline(cin, nomes[i]);
-    }
+
+        if (nomes[i] == ""){
+            cout << "Erro: O nome nao pode ficar em branco!\n\n";
+        }
+        }while(nomes[i] == "" || nomes[i] == " " || nomes[i] == "  " );
+    
+    }   
 
 
         // NOTAS E MEDIA COMMIT 2
