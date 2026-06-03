@@ -1,0 +1,5 @@
+====RELATORIO REPROVADOS====
+a1 - media:6.6 - a2 - media:6.4 - a3 - media:5.2 - a4 - media:4.6 - a5 - media:6 - 
+Resumo: 1 reprovados. 
+Data do relatorio: Wed Jun 03 10:36:45 2026
+

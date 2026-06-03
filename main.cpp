@@ -24,6 +24,7 @@ int main()
     cout << "1 - Novo relatorio " << endl;
     cout << "2 - Ver relatorio  " << endl; 
     cout << "3 - Sobre o sistema" << endl;
+    cout << "4 - Relatório de reprovados" << endl;
     cout << "Escolha uma opcao: " << endl;
     cin >> opcaoInicial;
 
@@ -45,6 +46,25 @@ int main()
         return 0;
    } 
 
+            //opicional C 
+        if (opcaoInicial == 4){
+        ifstream arquivo("reprovados.txt");
+        if(arquivo.is_open()){
+            string linha;
+            cout << "\n";
+            while (getline(arquivo, linha)){
+                cout << linha << endl;
+            }
+            arquivo.close();
+        }else{
+            cout << "Nenhum relatorio encontrado, faça um primeiro (opção 1). " << endl;
+        }
+        return 0;    
+    }
+
+        
+
+                    //TAREFA 1
         if(opcaoInicial == 3){
                 cout << "===== SOBRE =====" << endl; 
                 cout << "Sistema de Notas v4.1" << endl; 
@@ -131,7 +151,7 @@ int main()
         }
     }
 
-        //maior media e menor media 
+                //OPICIONAL B
         for (int i = 1; i < qtdAlunos; i++)
         {
             if (media[i] > media[mediaMaior])
@@ -146,11 +166,33 @@ int main()
 
         cout << "\nMaior media: " << nomes[mediaMaior] << " (" << media[mediaMaior] << ")" << endl;
         cout << "Menor media: " << nomes[mediaMenor] << " (" << media[mediaMenor] << ")" << endl;
+
     cout << "\nResumo: " << aprovados << "Aprovados, " << recuperaçao << " em recuperaçao, " << reprovados << "Reprovados." << endl;
       
+                    //OPICIONAL C
+         ofstream arquivoREP("reprovados.txt");
+         if (arquivoREP.is_open()){
+            arquivoREP << "====RELATORIO REPROVADOS====" << endl;
+            for (int i = 0; i < qtdAlunos; i++){
+                arquivoREP << nomes[i] << " - media:" << media[i] << " - ";
+                if (media[i] <= 5){
+                    cout << "Reprovado" << endl;
+                }
+            }
+            arquivoREP << "\nResumo: "<< reprovados << " reprovados. " << endl;
+             time_t agora = time(0);
+                char* dataHora = ctime(&agora);
+                arquivoREP << "Data do relatorio: " << dataHora << endl;
+
+        arquivoREP.close();
+        cout << "\nRelatorio salvo em relatorio.txt" << endl;
+         } else {
+            cout << "Erro ao criar arquivo. " << endl;
+         }
+
+
 
     ofstream arquivo("relatorio.txt");
-
     if(arquivo.is_open()){
         arquivo << "=====RELATORIO======" << endl;
         for (int i = 0; i < qtdAlunos; i++){

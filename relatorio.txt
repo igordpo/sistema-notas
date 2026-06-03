@@ -1,6 +1,10 @@
 =====RELATORIO======
-igor- media:6 - rcupraçao
+a1- media:6.6 - rcupraçao
+a2- media:6.4 - rcupraçao
+a3- media:5.2 - rcupraçao
+a4- media:4.6 - Reprovado
+a5- media:6 - rcupraçao
 
-Resumo: 0 aprovados, 1 em recuperaçao, 0 reprovados. 
-Data do relatorio: Wed Jun 03 09:14:20 2026
+Resumo: 0 aprovados, 4 em recuperaçao, 1 reprovados. 
+Data do relatorio: Wed Jun 03 10:36:45 2026
 
