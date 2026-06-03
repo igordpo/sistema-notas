@@ -15,6 +15,8 @@ int main()
     int qtdDisciplinas;
     int opcaoInicial;
     int validarNome;
+    int mediaMaior = 0;
+    int mediaMenor = 0;
 
     // processamento
     //LEITURA DE ALUNOS COMIT 1
@@ -51,7 +53,7 @@ int main()
                 
                 return 0;
         } 
-        
+
     do
     {
         cout << "Quantidade de alunos (1 a 20): ";
@@ -128,6 +130,22 @@ int main()
             reprovados++;
         }
     }
+
+        //maior media e menor media 
+        for (int i = 1; i < qtdAlunos; i++)
+        {
+            if (media[i] > media[mediaMaior])
+            {
+                mediaMaior = i;
+            }
+            if (media[i] < media[mediaMenor])
+            {
+                mediaMenor = i;
+            }
+        }
+
+        cout << "\nMaior media: " << nomes[mediaMaior] << " (" << media[mediaMaior] << ")" << endl;
+        cout << "Menor media: " << nomes[mediaMenor] << " (" << media[mediaMenor] << ")" << endl;
     cout << "\nResumo: " << aprovados << "Aprovados, " << recuperaçao << " em recuperaçao, " << reprovados << "Reprovados." << endl;
       
 
